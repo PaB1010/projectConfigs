@@ -47,5 +47,5 @@ springdoc:
 cors:
   allowed:
     - https://onedu.blue
-    - https://board-service.onedu.blue
+    - https://pintech.onedu.blue
     - http://localhost:3000
