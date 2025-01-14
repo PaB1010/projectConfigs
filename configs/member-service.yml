@@ -45,10 +45,7 @@ springdoc:
 
 # cors 설정
 cors:
-  allowed:
-    - https://onedu.blue
-    - https://pintech.onedu.blue
-    - http://localhost:3000
+  allowed: https://onedu.blue, https://pintech.onedu.blue, http://localhost:3000
 
 # Front & Domain
 front:
