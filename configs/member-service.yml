@@ -49,3 +49,7 @@ cors:
     - https://onedu.blue
     - https://pintech.onedu.blue
     - http://localhost:3000
+
+# Front & Domain
+front:
+  domain: https://pintech.onedu.blue, http://localhost:3000
