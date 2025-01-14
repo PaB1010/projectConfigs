@@ -42,3 +42,10 @@ springdoc:
     doc-expansion: none
   paths-to-match:
     - /**
+
+# cors 설정
+cors:
+  allowed:
+    - https://onedu.blue
+    - https://board-service.onedu.blue
+    - http://localhost:3000
