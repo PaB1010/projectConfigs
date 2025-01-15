@@ -41,6 +41,6 @@ springdoc:
     disable-swagger-default-url: true
     doc-expansion: none
   paths-to-match:
-    - /api/v1/**
+    - /**
 #    - /**
 #     MSA 사용시에는 /** 사용
