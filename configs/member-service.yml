@@ -50,3 +50,13 @@ cors:
 # Front & Domain
 front:
   domain: https://pintech.onedu.blue, http://localhost:3000
+
+# 유레카 설정
+eureka:
+  instance:
+    hostname: ${hostname}
+  client:
+    registerWithEureka: true # 유레카 서버가 발견 가능 여부
+    fetchRegistry: true # 유레카 서버내에서 목록 조회 노출 여부
+    serviceUrl:
+      defaultZone: ${eureka.server}/eureka/
