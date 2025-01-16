@@ -19,6 +19,13 @@ spring:
         discovery.locator:
           enabled: true # 유레카서버에서 찾는 여부
           lowerCaseServiceId: true # 소문자로 주소 완성
+        routes:
+          - id: member-service
+            uri: lb://member-service
+            predicates:
+              - Path=/api/v1/member/**
+            filters:
+              - RewritePath=/api/v1/member/?(?<path>.*),/$\{path}
 
 # 유레카 설정
 eureka:
