@@ -23,7 +23,7 @@ spring:
         - id: member-service
           uri: lb://member-service
           predicates:
-            - Path=/api/v1/member/**
+            - Path=/api/v1/member/** # 실제 접근 경로
           filters:
             - RewritePath=/api/v1/member/?(?<path>.*),/$\{path}
 
