@@ -27,8 +27,8 @@ eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
-  serviceUrl:
-    defaultZone: ${eureka.server}/eureka/
+    serviceUrl:
+      defaultZone: ${eureka.server}/eureka/
 
 # 액츄에이터 설정
 management:
