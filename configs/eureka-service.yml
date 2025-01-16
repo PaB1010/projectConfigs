@@ -1,0 +1,16 @@
+server:
+  port: 3998
+
+eureka:
+  instance:
+    hostname: ${hostname}
+  client:
+    registerWithEureka: false # 유레카 자신은 찾으면 안되니 false, 일반 인스턴스 서비스는 true
+    fetchRegistry: false # 유레카 자신은 조회시 노출 필요도 없어 false, 일반 인스턴스 서비스는 true
+    serviceUrl:
+      defaultZone:
+        # ${protocol} = http || https
+        # ${server.port} = 한 서버에 여러개의 유레카 서버가 있을 경우 대비
+        -${protocol}://${eureka.instance.hostname}:${server.port}/eureka/
+  server :
+    waitTimeInMsWhenSyncEmpty: 30000 # 30초에 한번씩 분산된 인스턴스 서버 검색
