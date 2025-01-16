@@ -26,6 +26,12 @@ spring:
             - Path=/api/v1/member/** # 실제 접근 경로
           filters:
             - RewritePath=/api/v1/member/?(?<path>.*),/$\{path}
+        - id: pokemon-service
+          uri: lb://pokemon-service
+          predicates:
+            - Path=/api/v1/pokemon/** # 실제 접근 경로
+          filters:
+            - RewritePath=/api/v1/pokemon/?(?<path>.*),/$\{path}
 
 # 유레카 설정
 eureka:
